@@ -19,10 +19,35 @@ public class ModItems {
         return registeredItem;
     }
 
+
+    //ITEMS
     public static final Item TREEFOLK_AXE = register(
             new Item(new Item.Settings()),
             "treefolk_axe"
     );
+
+    public static final Item TREEFOLK_HOE = register(
+            new Item(new Item.Settings()),
+            "treefolk_hoe"
+    );
+
+    public static final Item TREEFOLK_STAFF = register(
+            new Item(new Item.Settings()),
+            "treefolk_staff"
+    );
+
+    public static final Item TREEFOLK_DROP = register(
+            new Item(new Item.Settings()),
+            "treefolk_drop"
+    );
+
+    public static final Item TREEFOLK_PICKAXE = register(
+            new Item(new Item.Settings()),
+            "treefolk_pickaxe"
+    );
+
+
+
 
 
 
@@ -41,6 +66,10 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(TREEFOLK_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(TREEFOLK_AXE);
+            itemGroup.add(TREEFOLK_HOE);
+            itemGroup.add(TREEFOLK_STAFF);
+            itemGroup.add(TREEFOLK_DROP);
+            itemGroup.add(TREEFOLK_PICKAXE);
         });
     }
 }

@@ -1,4 +1,11 @@
 {
   "item.first-mod.treefolk_axe": "Treefolk Axe",
+  "item.first-mod.treefolk_hoe": "Treefolk Hoe",
+  "item.first-mod.treefolk_pickaxe": "Treefolk Pickaxe",
+  "item.first-mod.treefolk_staff": "Treefolk Staff",
+  "item.first-mod.treefolk_drop": "Treefolk Drop",
+
+
+
   "itemGroup.first-mod.treefolk_group": "Treefolk Items"
 }

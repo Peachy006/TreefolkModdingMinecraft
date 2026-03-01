@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 
 public enum TreefolkMaterial implements ToolMaterial {
     // This defines the "Treefolk" Tier
-    TREEFOLK(455, 7.0f, 2.5f, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 15, () -> Ingredient.ofItems(ModItems.TREEFOLK_DROP));
+    TREEFOLK(455, 7.0f, 2.5f, BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 15, () -> Ingredient.ofItems(ModItems.TREEFOLK_DROP));
 
     private final int durability;
     private final float miningSpeed;

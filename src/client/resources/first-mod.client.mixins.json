@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "sean.modding.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"ExampleClientMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -4,9 +4,11 @@
   "item.first-mod.treefolk_pickaxe": "Treefolk Pickaxe",
   "item.first-mod.treefolk_staff": "Treefolk Staff",
   "item.first-mod.treefolk_drop": "Treefolk Drop",
+  "item.first-mod.diamond_stick": "Diamond Stick",
+  "item.first-mod.diamond_staff": "Diamond Staff",
 
 
 
   "itemGroup.first-mod.treefolk_group": "Treefolk Tools and Weapons",
-  "itemGroup.first-mod.treefolk_group_2": "Treefolk Items "
+  "itemGroup.first-mod.treefolk_group_2": "Treefolk Items"
 }

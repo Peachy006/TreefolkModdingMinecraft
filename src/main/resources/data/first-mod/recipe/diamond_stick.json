@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["###", "#W#", "###"],
+  "key": {
+    "#": { "item": "minecraft:diamond" },
+    "W": { "item": "minecraft:stick" }
+  },
+  "result": {
+    "id": "first-mod:diamond_stick",
+    "count": 1
+  }
+}

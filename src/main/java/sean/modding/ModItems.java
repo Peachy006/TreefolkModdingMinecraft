@@ -11,6 +11,9 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
+
+
+    //ITEMS
     public static final Item TREEFOLK_DROP = register("treefolk_drop", new Item(new Item.Settings()));
 
     public static final Item TREEFOLK_PICKAXE = register("treefolk_pickaxe",
@@ -27,7 +30,12 @@ public class ModItems {
 
     public static final Item TREEFOLK_STAFF = register("treefolk_staff", new Item(new Item.Settings().maxCount(1)));
 
+    public static final Item DIAMOND_STAFF = register("diamond_staff", new Item(new Item.Settings().maxCount(1)));
+
     public static final Item DIAMOND_STICK = register("diamond_stick", new Item(new Item.Settings()));
+
+
+
 
 
     //register helper method
@@ -35,6 +43,10 @@ public class ModItems {
         return Registry.register(Registries.ITEM, Identifier.of(FirstMod.MOD_ID, name), item);
     }
 
+
+    //GROUPS
+
+    //GROUP1
     public static final RegistryKey<ItemGroup> TREEFOLK_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(),
             Identifier.of(FirstMod.MOD_ID, "treefolk_group"));
 
@@ -43,6 +55,8 @@ public class ModItems {
             .displayName(Text.translatable("itemGroup.first-mod.treefolk_group"))
             .build();
 
+
+    //GROUP2
     public static final RegistryKey<ItemGroup> TREEFOLK_GROUP_KEY_2 = RegistryKey.of(Registries.ITEM_GROUP.getKey(),
             Identifier.of(FirstMod.MOD_ID, "treefolk_group_2"));
 
@@ -51,6 +65,8 @@ public class ModItems {
             .displayName(Text.translatable("itemGroup.first-mod.treefolk_group_2"))
             .build();
 
+
+    //Called from FirstMod onInitialize to register the groups and add items to them
     public static void initialize() {
         Registry.register(Registries.ITEM_GROUP, TREEFOLK_GROUP_KEY, TREEFOLK_GROUP);
         Registry.register(Registries.ITEM_GROUP, TREEFOLK_GROUP_KEY_2, TREEFOLK_GROUP_2);
@@ -61,6 +77,7 @@ public class ModItems {
             itemGroup.add(TREEFOLK_AXE);
             itemGroup.add(TREEFOLK_HOE);
             itemGroup.add(TREEFOLK_STAFF);
+            itemGroup.add(DIAMOND_STAFF);
         });
 
         ItemGroupEvents.modifyEntriesEvent(TREEFOLK_GROUP_KEY_2).register(itemGroup -> {

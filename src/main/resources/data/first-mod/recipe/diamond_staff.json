@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["###", "#W#", "###"],
+  "key": {
+    "#": { "item": "first-mod:treefolk_drop" },
+    "W": { "item": "first-mod:diamond_stick" }
+  },
+  "result": {
+    "id": "first-mod:diamond_staff",
+    "count": 1
+  }
+}

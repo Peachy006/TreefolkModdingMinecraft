@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#W#",
+    "###"
+  ],
+  "key": {
+    "#": "first-mod:treefolk_drop",
+    "W": "minecraft:wooden_pickaxe"
+  },
+  "result": {
+    "id": "first-mod:treefolk_pickaxe",
+    "count": 1
+  }
+}

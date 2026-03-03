@@ -27,6 +27,10 @@ public class ModItems {
 
     public static final Item TREEFOLK_STAFF = register("treefolk_staff", new Item(new Item.Settings().maxCount(1)));
 
+    public static final Item DIAMOND_STICK = register("diamond_stick", new Item(new Item.Settings()));
+
+
+    //register helper method
     private static Item register(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(FirstMod.MOD_ID, name), item);
     }
@@ -39,8 +43,17 @@ public class ModItems {
             .displayName(Text.translatable("itemGroup.first-mod.treefolk_group"))
             .build();
 
+    public static final RegistryKey<ItemGroup> TREEFOLK_GROUP_KEY_2 = RegistryKey.of(Registries.ITEM_GROUP.getKey(),
+            Identifier.of(FirstMod.MOD_ID, "treefolk_group_2"));
+
+    public static final ItemGroup TREEFOLK_GROUP_2 = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(ModItems.DIAMOND_STICK))
+            .displayName(Text.translatable("itemGroup.first-mod.treefolk_group_2"))
+            .build();
+
     public static void initialize() {
         Registry.register(Registries.ITEM_GROUP, TREEFOLK_GROUP_KEY, TREEFOLK_GROUP);
+        Registry.register(Registries.ITEM_GROUP, TREEFOLK_GROUP_KEY_2, TREEFOLK_GROUP_2);
 
         ItemGroupEvents.modifyEntriesEvent(TREEFOLK_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(TREEFOLK_DROP);
@@ -48,6 +61,10 @@ public class ModItems {
             itemGroup.add(TREEFOLK_AXE);
             itemGroup.add(TREEFOLK_HOE);
             itemGroup.add(TREEFOLK_STAFF);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(TREEFOLK_GROUP_KEY_2).register(itemGroup -> {
+            itemGroup.add(DIAMOND_STICK);
         });
     }
 }
